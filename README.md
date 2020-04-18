@@ -11,6 +11,12 @@ Nesse momento é criado o arquivo package.json, indicando as caracteristicas do 
 Também é informado que a entrada do programa "main" é em index.js
 Caso ele não encontre, o programa não funciona.
 
-Para executar
+Para executar:
 `node index.js`
 `node .`
+
+Se quiser criar um script, basta incluir no package.json, na chave scripts
+ˋˋˋ
+  "scripts": {
+    "dev": "node index.js",
+ˋˋˋ
