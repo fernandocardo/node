@@ -16,7 +16,7 @@ Para executar:
 `node .`
 
 Se quiser criar um script, basta incluir no package.json, na chave scripts
-ˋˋˋ
+~~~~
   "scripts": {
     "dev": "node index.js",
-ˋˋˋ
+~~~~
