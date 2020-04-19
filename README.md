@@ -13,6 +13,7 @@ Caso ele não encontre, o programa não funciona.
 
 Para executar:
 `node index.js`
+ou 
 `node .`
 
 Se quiser criar um script, basta incluir no package.json, na chave scripts
@@ -20,3 +21,6 @@ Se quiser criar um script, basta incluir no package.json, na chave scripts
   "scripts": {
     "dev": "node index.js",
 ~~~~
+
+Para executar o script criado
+`npm run dev`
