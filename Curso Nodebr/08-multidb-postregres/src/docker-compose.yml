@@ -1,0 +1,42 @@
+version: '2'
+services:
+    postgres:
+        image: postgres
+        environment:
+        - POSTGRES_USER=fernandocardo
+        - POSTGRES_PASSWORD=minhasenhasecreta
+        - POSTGRES_DB=heroes
+        ports:
+        - "5432:5432"
+        networks:
+        - postgres        
+    adminer:
+        image: adminer
+        ports:
+        - "8080:8080"
+        networks:
+        - postgres
+    # mongo:
+    #     image: mongo:4
+    #     ports:
+    #     - "27017:27017"        
+    #     environment:
+    #     - MONGO_INITDB_ROOT_USERNAME=admin
+    #     - MONGO_INITDB_ROOT_PASSWORD=senhaadmin
+    #     networks:
+    #     - mongo
+    #     # command: >
+    #     #     bash -c "mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin --eval "db.getSiblingDB('herois').createUser({user: 'fernandocardo', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"           
+    # mongoclient:
+    #     image: mongoclient/mongoclient
+    #     ports:
+    #     - "3000:3000"        
+    #     environment:
+    #     - MONGO_INITDB_ROOT_USERNAME=admin
+    #     - MONGO_INITDB_ROOT_PASSWORD=senhaadmin
+    #     networks:
+    #     - mongo
+
+networks:
+    # mongo:
+    postgres:
