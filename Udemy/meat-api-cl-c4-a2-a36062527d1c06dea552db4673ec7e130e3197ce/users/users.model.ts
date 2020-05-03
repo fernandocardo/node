@@ -1,13 +1,6 @@
 import * as mongoose from 'mongoose'
 
 const userSchema = new mongoose.Schema({
-
-  id:{
-    type: String
-  },  
-  _id:{
-    type: String
-  },
   name: {
     type: String
   },
@@ -20,4 +13,5 @@ const userSchema = new mongoose.Schema({
     select: false
   }
 })
+
  export const User = mongoose.model('User', userSchema)
