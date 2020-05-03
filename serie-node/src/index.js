@@ -11,5 +11,6 @@ app.get('/',(req,res)=>{
 })
 
 require('./controllers/authController')(app);
+require('./controllers/usersController')(app);
 
 app.listen(3000)
